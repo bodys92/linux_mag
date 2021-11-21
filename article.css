@@ -1,0 +1,36 @@
+main {
+    width: 90%;
+    margin: auto;
+}
+
+.article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article__header {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.article__content {
+    width: 60%;
+}
+
+.article__image {
+    margin: 0;
+}
+
+.article__image img{
+    width: 100%;
+    height: auto;
+}
+
+.article__text {
+
+}
+
+aside {
+    align-self: center;
+    width: 200px;
+}
