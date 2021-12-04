@@ -1,12 +1,29 @@
+:root {
+    --gap: 3rem;
+    --main-bg-color: #474747;
+    --card-bg-color: #f2f2f2;
+    --main-font-color: var(--main-bg-color);
+    --color-blue: #00acff;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
 
 .head-container { 
     width: 100%;
 }
 
 .head-article{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: var(--gap) 0 var(--gap) 0;
 }
 
 .head-article__image a img {
@@ -14,12 +31,15 @@
     height: auto;
 }
 
-.head-article__text {
-    width: 50%;
-}
-
 .article{
-    width: 30%;
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
 }
 
@@ -27,23 +47,55 @@
     width: 100%;
 }
 
-.big_news{
+.adver{
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 var(--gap);
+    padding: 1rem;
 }
 
-.small_news{
-    width: 90%;
-    margin: auto;
+.adver__image img{
+    width: 100%;
+}
+
+main{
+    padding: 0 var(--gap) 0 var(--gap);
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: var(--gap);
+    margin: 0 auto;
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: var(--gap);
+    margin: 0 0 var(--gap);
+    grid-auto-rows: min-content;
 }
 
 .small_news article {
-    border-top: 2px solid grey;
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: var(--gap);
+    padding: 1rem;
 }
 
 .small_news article:last-child {
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid var(--color-blue);
 }
 
 .small_news article h2 {
@@ -55,9 +107,16 @@
 }
 
 @media screen and (max-width: 768px) {
+    :root{
+        --gap: 1rem;
+    }
+    
+    .main-container{
+        display: block;
+    }
+
     .head-article{
         padding: 1rem;
-        margin: 0;
         display: block;
     }
     .head-article__image {

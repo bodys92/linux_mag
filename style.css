@@ -10,6 +10,17 @@ Modifikátor elementu	.block__element--modifier
 <ul class="nav nav--secondary" role="navigation">
   <li class="nav__item">*/
 
+:root {
+    --gap: 3rem;
+    --main-bg-color: #474747;
+    --card-bg-color: #f2f2f2;
+    --main-font-color: var(--main-bg-color);
+    --text-dark: #474747;
+    --text-hover: black;
+    --text-highlited: #00acff;
+}
+
+
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -30,7 +41,7 @@ body{
 .nav__item {
     float: left;
     display: block;
-    color: gray;
+    color: var(--text-dark);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -41,11 +52,11 @@ body{
 }
   
 .nav__item:hover {
-    color: black;
+    color: var(--text-hover);
 }
   
 .nav_item--active {
-    color: #2196F3;
+    color: var(--text-highlited);
 }
   
 .search-container {
@@ -63,12 +74,16 @@ body{
     padding: 0.5rem;
     background: #ddd;
     font-size: 1rem;
-    border: none;
+    border: 1px solid gray;
     cursor: pointer;
 }
   
 .search-container__btn:hover {
-    background: #ccc;
+    border-color: var(--text-hover);
+}
+
+.main-footer{
+    background-color: gray;
 }
 
 .main-footer p{
