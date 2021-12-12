@@ -91,7 +91,7 @@ body{
 
 .main-footer{
     background-color: gray;
-    position: relative;
+    margin-top: auto;
 }
 
 .main-footer p{
@@ -313,6 +313,31 @@ main{
     overflow: hidden;
     padding: 1rem;
     margin: var(--gap) 0 var(--gap) 0;
+}
+
+.search {
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 1rem;
+    margin: var(--gap) 0 var(--gap) 0;
+}
+
+.search__text {
+    font-weight: bold;
+}
+
+.search__link {
+    color: var(--main-font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search__link:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
