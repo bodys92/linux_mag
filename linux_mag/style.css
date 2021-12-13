@@ -24,6 +24,9 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: var(--main-bg-color);
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
 }
 
 .nav {
@@ -88,7 +91,7 @@ body{
 
 .main-footer{
     background-color: gray;
-    position: relative;
+    margin-top: auto;
 }
 
 .main-footer p{
@@ -156,6 +159,11 @@ h1 {
     width: auto;
 }
 
+.main-article__breadcrumb {
+    font-weight: bold;
+    color: var(--main-font-color);
+}
+
 .article{
     background: var(--card-bg-color);
     color: var(--main-font-color);
@@ -167,6 +175,7 @@ h1 {
     flex-direction: column;
     padding: 1rem;
     width: auto;
+    margin-bottom: 20px;
 }
 
 
@@ -218,7 +227,7 @@ main{
 
 .redaction-footer{
     background-color: gray;
-    position: relative;
+    margin-top: auto;
 }
 
 .redaction-footer p{
@@ -229,10 +238,7 @@ main{
 
 .contact-footer{
     background-color: gray;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: auto;
 }
 
 .contact-footer p{
@@ -244,6 +250,15 @@ main{
     display: block;
     gap: var(--gap);
     margin: 0 0 var(--gap);
+}
+
+.redactions__email {
+    font-weight: bold;
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+.redactions__email:hover {
+    text-decoration: underline;
 }
 
 .articles{
@@ -281,6 +296,23 @@ main{
     border: 1px solid #ccc;
 }
 
+.contacts {
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 1rem;
+    margin: var(--gap) 0 var(--gap) 0;
+}
+
+.contacts__row {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .category article {
     background: var(--card-bg-color);
     color: var(--main-font-color);
@@ -290,6 +322,31 @@ main{
     overflow: hidden;
     padding: 1rem;
     margin: var(--gap) 0 var(--gap) 0;
+}
+
+.search {
+    background: var(--card-bg-color);
+    color: var(--main-font-color);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 1rem;
+    margin: var(--gap) 0 var(--gap) 0;
+}
+
+.search__text {
+    font-weight: bold;
+}
+
+.search__link {
+    color: var(--main-font-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.search__link:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
@@ -366,15 +423,20 @@ main{
 
     .redaction-footer{
         background-color: gray;
-        position: absolute;
+        margin-top: auto;
+        /* position: fixed;
         bottom: 0;
         left: 0;
-        right: 0;
+        right: 0; */
     }
 
     .redaction-footer p{
         width: 90%;
         margin: auto;
+    }
+
+    .contacts__row {
+        display: flex;
     }
 
 }
